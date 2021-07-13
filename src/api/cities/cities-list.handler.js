@@ -1,6 +1,5 @@
 'use strict';
 
-const Boom = require('boom');
 const City = require('./../../models/City')
 
 async function handler(request, h) {

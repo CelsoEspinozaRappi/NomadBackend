@@ -8,6 +8,7 @@ const dbConfig = require('./config/dbconfig');
 //services
 const cityList = require('./src/api/cities/cities-list.route');
 const cityCreate = require('./src/api/cities/cities-create.route');
+const routeCreate = require('./src/api/routes/routes-create.router');
 
 dbConfig.initConnection();
 
@@ -41,9 +42,9 @@ async function initServer() {
 		}
 	});
 
-    // crud cities
 	server.route(cityList);
 	server.route(cityCreate);
+	server.route(routeCreate);
 
 	// Corre el servidor.
 	await server.start();
